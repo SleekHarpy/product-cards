@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Карточки товара",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
@@ -10,6 +12,7 @@
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-add-src": "^1.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -37,7 +40,7 @@
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
+    "IE 10",
     "Firefox ESR"
   ],
   "editorconfig-cli": [

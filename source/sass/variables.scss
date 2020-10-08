@@ -1,13 +1,16 @@
 $main-font-family: "Exo 2", "Open Sans", sans-serif;
+$secondary-font-family: "Trebuchet MS", "Arial", sans-serif;
 
 $main-color: #ffffff;
 $secondary-color: #666666;
 $background-color: #f2f2f2;
 $text-color: #000000;
-$border-color: #1698d9;
+$default-color: #1698d9;
 $disabled-color: #b3b3b3;
 $selected-color: #d91667;
 $not-available: #ffff66;
 
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
+$tablet-max-width: 1023px;
+$tablet-min-width: 768px;
+$mobile-max-width: 767px;
+$mobile-min-width: 320px;

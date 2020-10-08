@@ -1,0 +1,259 @@
+.card {
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: $secondary-font-family;
+
+    list-style: none;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.card__inner {
+    position: relative;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+
+    color: $secondary-color;
+
+    border-radius: 12px;
+    background-image: url("../img/bg-card.svg");
+
+    clip-path: polygon(13.3% 0, 100% 0, 100% 107%, 0 107%, 0 8.9%);
+
+    cursor: pointer;
+}
+
+.card--selected .card__inner {
+    background-image: url("../img/bg-card-selected.svg");
+}
+
+.card--disabled .card__inner {
+    background-image: url("../img/bg-card-disabled.svg");
+
+    cursor: default;
+}
+
+.card__top {
+    padding-top: 2px;
+    padding-right: 44px;
+    padding-left: 47px;
+    padding-bottom: 18px;
+}
+
+.card__description {
+    margin-bottom: 17px;
+
+    &--hover {
+        display: none;
+    }
+}
+
+.card--disabled .card__description {
+    color: $disabled-color;
+
+    opacity: 0.5;
+}
+
+.card__description-hover {
+    display: none;
+}
+
+.card--selected:hover .card__description-default--deactivate {
+    display: none;
+}
+
+.card--selected:hover .card__description-hover--active {
+    display: block;
+
+    color: $selected-color;
+}
+
+.card__title {
+    margin: 0;
+    margin-bottom: 12px;
+
+    color: $text-color;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 33px;
+}
+
+.card__taste {
+    font-size: 24px;
+}
+
+.card--disabled .card__title {
+    color: $disabled-color;
+    opacity: 0.5;
+}
+
+.card__options {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 16px;
+    list-style: none;
+}
+
+.card__options-quantity {
+    font-weight: 700;
+}
+
+.card--disabled .card__options {
+    color: $disabled-color;
+    opacity: 0.5;
+}
+
+.card__img {
+    display: block;
+    width: 310px;
+
+    border-radius: 8px;
+}
+
+.card--disabled .card__img {
+    opacity: 0.5;
+}
+
+.card__weight {
+    position: absolute;
+    right: 16px;
+    bottom: -27px;
+    padding-top: 23px;
+    padding-bottom: 5px;
+
+    width: 80px;
+
+    text-align: center;
+    color: $main-color;
+    font-size: 42px;
+    line-height: 22px;
+
+    background-color: $default-color;
+    border-radius: 50%;
+}
+
+.card--selected .card__weight {
+    background-color: $selected-color;
+}
+
+.card--disabled .card__weight {
+    background-color: $disabled-color;
+}
+
+.card__metric {
+    font-size: 21px;
+}
+
+.card__call {
+    font-size: 13px;
+    color: $main-color;
+    text-align: center;
+
+    &--selected {
+        display: none;
+    }
+
+    &--disabled {
+        display: none;
+    }
+}
+
+.card__appeal {
+    position: relative;
+    font-weight: 700;
+    color: $default-color;
+    text-decoration: none;
+
+
+    &::after {
+        position: absolute;
+        left: 1px;
+        bottom: 0;
+
+        display: block;
+        width: 80%;
+        height: 1px;
+
+        border-bottom: 1px dashed;
+
+        content: "";
+    }
+
+    &:hover::after {
+        border-bottom: 1px solid;
+    }
+}
+
+.card--selected .card__call {
+    display: none;
+}
+
+.card--selected .card__call--selected {
+    display: block;
+}
+
+.card--disabled .card__call {
+    display: none;
+}
+
+.card--disabled .card__call--disabled {
+    display: block;
+
+    color: $not-available;
+}
+
+@media (max-width: $tablet-max-width) {
+    .card {
+        margin-right: 80px;
+
+        &:first-child {
+            margin-right: 0;
+            margin-bottom: 67px;
+
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $mobile-max-width) {
+    .card {
+        margin-right: 0;
+        margin-bottom: 10px;
+
+        width: 300px;
+
+        &:first-child {
+            margin-bottom: 10px;
+
+            width: 300px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__img {
+        width: 290px;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .card__top {
+        margin-bottom: auto;
+    }
+}

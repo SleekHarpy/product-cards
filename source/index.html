@@ -8,17 +8,114 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Описание страницы">
-    <link rel="preload" href="exo-2-v9-cyrillic-100.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-v14-cyrillic-regular.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-v14-cyrillic-500.woff2" as="font">
-
+    <link rel="preload" href="fonts/exo-2-v9-cyrillic-100.woff2" as="font">
 
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body class="common">
+    <main class="main-page">
 
-    <script src="js/vendor.js"></script>
+      <div class="products">
+
+        <h1 class="products__title">Ты сегодня покормил кота?</h1>
+
+        <ul class="products__list">
+
+          <li class="products__item card">
+            <div class="card__inner">
+
+              <div class="card__top">
+                <p class="card__description">
+                  <span class="card__description-default">Сказочное заморское яство</span>
+                  <span class="card__description-hover">Котэ не одобряет?</span>
+                </p>
+                <h2 class="card__title">Нямушка <span class="card__taste">с фуа-гра</span></h2>
+                <ul class="card__options">
+                  <li class="card__options-item"><span class="card__options-quantity">10</span> порций</li>
+                  <li class="card__options-item">мышь в подарок</li>
+                </ul>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/cat.webp 1x, img/cat@2x.webp 2x">
+
+                <img class="card__img" src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Котэ">
+              </picture>
+              <p class="card__weight">
+                <span>0,5</span>
+                <br>
+                <span class="card__metric">кг</span>
+              </p>
+
+            </div>
+            <p class="card__call">Чего сидишь? Порадуй котэ, <a class="card__appeal" href="#">купи.</a></p>
+            <p class="card__call card__call--selected">Печень утки разварная с артишоками.</p>
+            <p class="card__call card__call--disabled">Печалька, с рыбой закончился.</p>
+          </li>
+
+          <li class="products__item card card--selected">
+            <div class="card__inner">
+              <div class="card__top">
+                <p class="card__description">
+                  <span class="card__description-default card__description-default--deactivate">Сказочное заморское яство</span>
+                  <span class="card__description-hover card__description-hover--active">Котэ не одобряет?</span>
+                </p>
+                <h2 class="card__title">Нямушка <span class="card__taste">с рыбой</span></h2>
+                <ul class="card__options">
+                  <li class="card__options-item"><span class="card__options-quantity">40</span> порций</li>
+                  <li class="card__options-item"><span class="card__options-quantity">2</span> мыши в подарок</li>
+                </ul>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/cat.webp 1x, img/cat@2x.webp 2x">
+
+                <img class="card__img" src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Котэ">
+              </picture>
+              <p class="card__weight">
+                <span>2</span>
+                <br>
+                <span class="card__metric">кг</span>
+              </p>
+            </div>
+            <p class="card__call">Чего сидишь? Порадуй котэ, <a class="card__appeal" href="#">купи.</a></p>
+            <p class="card__call card__call--selected">Головы щучьи с чесноком да свежайшая сёмгушка.</p>
+            <p class="card__call card__call--disabled">Печалька, с рыбой закончился.</p>
+          </li>
+
+          <li class="products__item card card--disabled">
+            <div class="card__inner">
+              <div class="card__top">
+                <p class="card__description">
+                  <span class="card__description-default">Сказочное заморское яство</span>
+                  <span class="card__description-hover">Котэ не одобряет?</span>
+                </p>
+                <h2 class="card__title">Нямушка <span class="card__taste">с курой</span></h2>
+                <ul class="card__options">
+                  <li class="card__options-item"><span class="card__options-quantity">100</span> порций</li>
+                  <li class="card__options-item"><span class="card__options-quantity">5</span> мышей в подарок</li>
+                  <li class="card__options-item">заказчик доволен</li>
+                </ul>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/cat.webp 1x, img/cat@2x.webp 2x">
+
+                <img class="card__img" src="img/cat.png" srcset="img/cat@2x.png 2x" alt="Котэ">
+              </picture>
+              <p class="card__weight">
+                <span>5</span>
+                <br>
+                <span class="card__metric">кг</span>
+              </p>
+            </div>
+            <p class="card__call">Чего сидишь? Порадуй котэ, <a class="card__appeal" href="#">купи.</a></p>
+            <p class="card__call card__call--selected">Филе из циплят с трюфелями в бульоне.</p>
+            <p class="card__call card__call--disabled">Печалька, с курой закончился.</p>
+          </li>
+
+        </ul>
+      </div>
+    </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>
